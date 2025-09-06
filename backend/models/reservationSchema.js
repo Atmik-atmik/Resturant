@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import validator from "validatore"
+import validator from "validator"
 
 const reservationSchema = new mongoose.Schema({
     firstName: {
@@ -25,8 +25,8 @@ const reservationSchema = new mongoose.Schema({
     phone: {
         type: String,
         required: true,
-        miniLength: [10,"Phone number must contain only 10 digits"],
-        maxLenght: [10,"Phone number must contain only 10 digits"]
+        minlength: [10,"Phone number must contain only 10 digits"],
+        maxlength: [10,"Phone number must contain only 10 digits"]
     },
 
     time: {
